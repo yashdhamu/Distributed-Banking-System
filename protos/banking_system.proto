@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package banking_system;
+
+service exchange_messages {
+    rpc MsgDelivery (Request) returns (Response);
+}
+
+message Request {
+    int32 id = 1;
+    string interface = 2;
+    int32 money = 3;
+    int64 logical_timestamp = 4; // Added logical timestamp field
+}
+
+message Response {
+    string interface = 1;
+    int32 balance = 2;
+    string result = 3;
+    int64 logical_timestamp = 4; // Added logical timestamp field
+}

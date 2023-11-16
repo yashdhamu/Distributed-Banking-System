@@ -1,0 +1,34 @@
+Hello Neha,
+
+Please note the directory stuructre below
+
+- Project Directory/
+    - protos/
+        - banking_system.proto
+    - Customer.py
+    - Branch.py
+    - input_10.json
+
+
+Instructions:
+
+1. Download the provided code archive from the canvas.
+2. Extract all files to a single directory on your system.
+3. Open your terminal and navigate to the root directory containing Branch.py and Customer.py. Execute the following command: python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ./protos/banking_system.proto
+4. Your setup is now complete. You can run Branch.py and Customer.py using python3
+
+The output for this project will generate three files:
+
+    - customer_file.json
+    - branch_file.json
+    - event_file.json
+
+All the data about the events is stored in these three files. Please run the checker file on these 3 JSON files:
+
+
+- python3 customer_file.json
+- python3 branch_file.json
+- python3 event_file.json
+
+Thanks,
+Yash
